@@ -1,0 +1,6 @@
+services:
+
+   flexix_api.entity_controller:
+        class: Flexix\ApiBundle\Controller\EntityController
+        arguments: ['@service_container','@flexix_prototype_controller.configuration_factory','@request_stack','@flexix_prototype_controller.data_adapter']
+  

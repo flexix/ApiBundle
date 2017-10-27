@@ -1,0 +1,32 @@
+
+api_list:
+    path: "api/{module}/{alias}/list"
+    defaults: { _controller: "flexix_api.entity_controller:listAction", "action": "list", _format: "json", module: null }
+    methods:  [GET]
+    requirements : {"module": "v1","_format": "json"}    
+
+    
+api_new:
+    path: "api/{module}/{alias}/new"
+    defaults: { _controller: "flexix_api.entity_controller:newAction", "action": "new",   _format: "json",  module: null }
+    methods:  [PUT]
+    requirements : {"module": "v1","_format": "json"} 
+    
+    
+api_delete:
+    path: "api/{module}/{alias}/delete/{id}"
+    defaults: { _controller: "flexix_api.entity_controller:deleteAction", "action": "delete", _format: "json",id: null, module: null }
+    methods:  [DELETE]
+    requirements : {"module": "v1","_format": "json"} 
+    
+api_edit:
+    path: "api/{module}/{alias}/edit/{id}"
+    defaults: { _controller: "flexix_api.entity_controller:editAction",  "action": "edit", _format: "json", id: null, module: null }
+    methods:  [POST]
+    requirements : {"module": "v1","_format": "json"} 
+    
+api_get:
+    path: "api/{module}/{alias}/get/{id}"
+    defaults: { _controller: "flexix_api.entity_controller:getAction","action": "get", _format: "json",id: null, module: null }
+    methods:  [GET]
+    requirements : {"module": "v1","_format": "json"}  
